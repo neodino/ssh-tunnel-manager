@@ -331,9 +331,15 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = 45F440740F233042004EB88E /* Build configuration list for PBXProject "SSH Tunnel Manager" */;
 			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* SSH Tunnel Manager */;
 			projectDirPath = "";
 			projectRoot = "";

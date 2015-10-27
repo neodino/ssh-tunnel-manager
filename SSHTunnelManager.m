@@ -13,8 +13,6 @@
 @implementation SSHTunnelManager
 - (void)awakeFromNib
 {
-    SInt32 vers; 
-    Gestalt(gestaltSystemVersion,&vers); 
     [[ NSUserDefaults standardUserDefaults ] registerDefaults:
         [ NSDictionary dictionaryWithObjectsAndKeys:
 	    [ NSNumber numberWithBool: YES ], @"autoOpen",
