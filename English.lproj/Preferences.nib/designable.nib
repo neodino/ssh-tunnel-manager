@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment version="101000" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSWindowController">
+            <connections>
+                <outlet property="window" destination="6" id="63"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" visibleAtLaunch="NO" animationBehavior="default" id="6" userLabel="Window">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="177" y="423" width="476" height="383"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="832"/>
+            <view key="contentView" id="5">
+                <rect key="frame" x="0.0" y="0.0" width="476" height="383"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <scrollView autohidesScrollers="YES" horizontalLineScroll="18" horizontalPageScroll="10" verticalLineScroll="18" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="9">
+                        <rect key="frame" x="20" y="151" width="127" height="185"/>
+                        <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
+                        <clipView key="contentView" id="TjG-eq-ALa">
+                            <rect key="frame" x="1" y="1" width="125" height="183"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnReordering="NO" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="16" id="10">
+                                    <rect key="frame" x="0.0" y="0.0" width="125" height="183"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                    <size key="intercellSpacing" width="3" height="2"/>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                    <tableColumns>
+                                        <tableColumn identifier="tunnelName" width="122" minWidth="40" maxWidth="1000" id="7">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" alignment="left" id="212">
+                                                <font key="font" metaFont="cellTitle"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </textFieldCell>
+                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                        </tableColumn>
+                                    </tableColumns>
+                                    <connections>
+                                        <outlet property="dataSource" destination="80" id="98"/>
+                                        <outlet property="delegate" destination="80" id="99"/>
+                                    </connections>
+                                </tableView>
+                            </subviews>
+                            <animations/>
+                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </clipView>
+                        <animations/>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="219">
+                            <rect key="frame" x="-100" y="-100" width="110" height="15"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <animations/>
+                        </scroller>
+                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="220">
+                            <rect key="frame" x="-30" y="1" width="15" height="178"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <animations/>
+                        </scroller>
+                    </scrollView>
+                    <imageView id="35">
+                        <rect key="frame" x="20" y="76" width="130" height="67"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <animations/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="stm" id="176"/>
+                    </imageView>
+                    <textField verticalHuggingPriority="750" id="36">
+                        <rect key="frame" x="17" y="55" width="133" height="13"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <animations/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" id="177">
+                            <font key="font" metaFont="label"/>
+                            <string key="title">SSH Tunnel Manager
+</string>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="37" customClass="TLinkTextField">
+                        <rect key="frame" x="17" y="39" width="133" height="15"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <animations/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Visit Web site" id="178">
+                            <font key="font" metaFont="label"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="96" customClass="TVersionTextField">
+                        <rect key="frame" x="22" y="0.0" width="431" height="13"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <animations/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="SSH Tunnel Manager v%@ (%X)" id="179">
+                            <font key="font" metaFont="label"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <customView id="114">
+                        <rect key="frame" x="155" y="20" width="301" height="316"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <customView id="109">
+                                <rect key="frame" x="0.0" y="243" width="301" height="73"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <textField toolTip="Remote port to connect to" verticalHuggingPriority="750" id="18">
+                                        <rect key="frame" x="220" y="3" width="36" height="19"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                        <animations/>
+                                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" drawsBackground="YES" id="193">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <connections>
+                                            <action selector="controlChanged:" target="80" id="142"/>
+                                            <outlet property="nextKeyView" destination="11" id="138"/>
+                                        </connections>
+                                    </textField>
+                                    <textField verticalHuggingPriority="750" id="17">
+                                        <rect key="frame" x="183" y="5" width="38" height="14"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                        <animations/>
+                                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="Port :" id="192">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField toolTip="Remote host name or IP address" verticalHuggingPriority="750" id="16">
+                                        <rect key="frame" x="57" y="3" width="112" height="19"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                        <animations/>
+                                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" drawsBackground="YES" id="191">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <connections>
+                                            <action selector="controlChanged:" target="80" id="141"/>
+                                            <outlet property="nextKeyView" destination="18" id="137"/>
+                                        </connections>
+                                    </textField>
+                                    <textField verticalHuggingPriority="750" id="15">
+                                        <rect key="frame" x="3" y="5" width="41" height="14"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <animations/>
+                                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="Host :" id="190">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField verticalHuggingPriority="750" id="14">
+                                        <rect key="frame" x="3" y="28" width="41" height="14"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <animations/>
+                                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="Login :" id="189">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField toolTip="Username to connect to remote host" verticalHuggingPriority="750" id="13">
+                                        <rect key="frame" x="57" y="26" width="199" height="19"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <animations/>
+                                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" drawsBackground="YES" id="188">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <connections>
+                                            <action selector="controlChanged:" target="80" id="140"/>
+                                            <outlet property="nextKeyView" destination="16" id="136"/>
+                                        </connections>
+                                    </textField>
+                                    <textField verticalHuggingPriority="750" id="12">
+                                        <rect key="frame" x="3" y="51" width="49" height="14"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <animations/>
+                                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="Name :" id="187">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField toolTip="Name of the tunnel, as shown in the tunnels list" verticalHuggingPriority="750" id="11">
+                                        <rect key="frame" x="57" y="49" width="199" height="19"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <animations/>
+                                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" drawsBackground="YES" id="186">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <connections>
+                                            <action selector="controlChanged:" target="80" id="139"/>
+                                            <outlet property="nextKeyView" destination="13" id="135"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <animations/>
+                            </customView>
+                            <customView id="106">
+                                <rect key="frame" x="0.0" y="28" width="301" height="207"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <customView id="108">
+                                        <rect key="frame" x="0.0" y="0.0" width="301" height="101"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button id="126">
+                                                <rect key="frame" x="283" y="56" width="12" height="12"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                                <animations/>
+                                                <buttonCell key="cell" type="square" title="Button" bezelStyle="shadowlessSquare" image="Remove" imagePosition="only" alignment="center" alternateImage="Remove_Pressed" inset="2" id="185">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="delRemote:" target="80" id="128"/>
+                                                </connections>
+                                            </button>
+                                            <button id="125">
+                                                <rect key="frame" x="283" y="67" width="12" height="12"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                                <animations/>
+                                                <buttonCell key="cell" type="square" title="Button" bezelStyle="shadowlessSquare" image="Add" imagePosition="only" alignment="center" alternateImage="Add_Pressed" inset="2" id="184">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="addRemote:" target="80" id="127"/>
+                                                </connections>
+                                            </button>
+                                            <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="33">
+                                                <rect key="frame" x="0.0" y="85" width="250" height="5"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                <animations/>
+                                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <font key="titleFont" metaFont="system"/>
+                                            </box>
+                                            <textField verticalHuggingPriority="750" id="32">
+                                                <rect key="frame" x="-1" y="87" width="256" height="14"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                <animations/>
+                                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Remote redirections" id="183">
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <scrollView autohidesScrollers="YES" horizontalLineScroll="15" horizontalPageScroll="10" verticalLineScroll="15" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="29">
+                                                <rect key="frame" x="0.0" y="1" width="275" height="78"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <clipView key="contentView" id="zbL-sG-dyI">
+                                                    <rect key="frame" x="1" y="23" width="273" height="54"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="13" headerView="225" id="27" customClass="TunnelsTableView">
+                                                            <rect key="frame" x="0.0" y="0.0" width="273" height="54"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <animations/>
+                                                            <size key="intercellSpacing" width="3" height="2"/>
+                                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                                            <tableColumns>
+                                                                <tableColumn identifier="port" width="40" minWidth="40" maxWidth="1000" id="30">
+                                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Port">
+                                                                        <font key="font" metaFont="smallSystem"/>
+                                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    </tableHeaderCell>
+                                                                    <textFieldCell key="dataCell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" alignment="left" id="217">
+                                                                        <font key="font" metaFont="label"/>
+                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <connections>
+                                                                            <outlet property="formatter" destination="Ong-tB-2Mz" id="d5T-Pf-F13"/>
+                                                                        </connections>
+                                                                    </textFieldCell>
+                                                                </tableColumn>
+                                                                <tableColumn identifier="host" width="189" minWidth="40" maxWidth="1000" id="28">
+                                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Remote Host">
+                                                                        <font key="font" metaFont="smallSystem"/>
+                                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    </tableHeaderCell>
+                                                                    <textFieldCell key="dataCell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" alignment="left" id="216">
+                                                                        <font key="font" metaFont="label"/>
+                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    </textFieldCell>
+                                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                                </tableColumn>
+                                                                <tableColumn identifier="hostport" width="35" minWidth="4" maxWidth="1000" id="31">
+                                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Port">
+                                                                        <font key="font" metaFont="smallSystem"/>
+                                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                                    </tableHeaderCell>
+                                                                    <textFieldCell key="dataCell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" alignment="left" id="218">
+                                                                        <font key="font" metaFont="label"/>
+                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                        <connections>
+                                                                            <outlet property="formatter" destination="Ong-tB-2Mz" id="eLP-bd-6nu"/>
+                                                                        </connections>
+                                                                    </textFieldCell>
+                                                                </tableColumn>
+                                                            </tableColumns>
+                                                            <connections>
+                                                                <outlet property="dataSource" destination="80" id="102"/>
+                                                                <outlet property="delegate" destination="80" id="103"/>
+                                                            </connections>
+                                                        </tableView>
+                                                    </subviews>
+                                                    <animations/>
+                                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </clipView>
+                                                <animations/>
+                                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" controlSize="small" horizontal="YES" id="224">
+                                                    <rect key="frame" x="-100" y="-100" width="233" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <animations/>
+                                                </scroller>
+                                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" controlSize="small" horizontal="NO" id="226">
+                                                    <rect key="frame" x="-22" y="17" width="11" height="60"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <animations/>
+                                                </scroller>
+                                                <tableHeaderView key="headerView" id="225">
+                                                    <rect key="frame" x="0.0" y="0.0" width="273" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <animations/>
+                                                </tableHeaderView>
+                                            </scrollView>
+                                        </subviews>
+                                        <animations/>
+                                    </customView>
+                                    <customView id="107">
+                                        <rect key="frame" x="0.0" y="109" width="301" height="98"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <button id="123">
+                                                <rect key="frame" x="283" y="55" width="12" height="12"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                                <animations/>
+                                                <buttonCell key="cell" type="square" title="Button" bezelStyle="shadowlessSquare" image="Remove" imagePosition="only" alignment="center" alternateImage="Remove_Pressed" inset="2" id="182">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="delLocal:" target="80" id="130"/>
+                                                </connections>
+                                            </button>
+                                            <button id="122">
+                                                <rect key="frame" x="283" y="66" width="12" height="12"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                                <animations/>
+                                                <buttonCell key="cell" type="square" title="Button" bezelStyle="shadowlessSquare" image="Add" imagePosition="only" alignment="center" alternateImage="Add_Pressed" inset="2" id="181">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="addLocal:" target="80" id="129"/>
+                                                </connections>
+                                            </button>
+                                            <scrollView autohidesScrollers="YES" horizontalLineScroll="15" horizontalPageScroll="10" verticalLineScroll="15" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="22">
+                                                <rect key="frame" x="0.0" y="0.0" width="275" height="78"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <clipView key="contentView" id="IVG-oI-nWH">
+                                                    <rect key="frame" x="1" y="23" width="273" height="54"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="13" headerView="222" id="25" customClass="TunnelsTableView">
+                                                            <rect key="frame" x="0.0" y="0.0" width="273" height="54"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <animations/>
+                                                            <size key="intercellSpacing" width="3" height="2"/>
+                                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                                            <tableColumns>
+                                                                <tableColumn identifier="port" width="35" minWidth="35" maxWidth="1000" id="23">
+                                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Port">
+                                                                        <font key="font" metaFont="smallSystem"/>
+                                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    </tableHeaderCell>
+                                                                    <textFieldCell key="dataCell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" alignment="left" id="213">
+                                                                        <font key="font" metaFont="label"/>
+                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <connections>
+                                                                            <outlet property="formatter" destination="Ong-tB-2Mz" id="G7g-QB-LZY"/>
+                                                                        </connections>
+                                                                    </textFieldCell>
+                                                                </tableColumn>
+                                                                <tableColumn identifier="host" width="194" minWidth="40" maxWidth="1000" id="24">
+                                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="LAN Host">
+                                                                        <font key="font" metaFont="smallSystem"/>
+                                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    </tableHeaderCell>
+                                                                    <textFieldCell key="dataCell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" alignment="left" id="214">
+                                                                        <font key="font" metaFont="label"/>
+                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    </textFieldCell>
+                                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                                </tableColumn>
+                                                                <tableColumn identifier="hostport" width="35.451999664306641" minWidth="4" maxWidth="1000" id="26">
+                                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Port">
+                                                                        <font key="font" metaFont="smallSystem"/>
+                                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                                    </tableHeaderCell>
+                                                                    <textFieldCell key="dataCell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" alignment="left" id="215">
+                                                                        <font key="font" metaFont="label"/>
+                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                        <connections>
+                                                                            <outlet property="formatter" destination="Ong-tB-2Mz" id="6j3-ZH-PGd"/>
+                                                                        </connections>
+                                                                    </textFieldCell>
+                                                                </tableColumn>
+                                                            </tableColumns>
+                                                            <connections>
+                                                                <outlet property="dataSource" destination="80" id="100"/>
+                                                                <outlet property="delegate" destination="80" id="101"/>
+                                                            </connections>
+                                                        </tableView>
+                                                    </subviews>
+                                                    <animations/>
+                                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </clipView>
+                                                <animations/>
+                                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" controlSize="small" horizontal="YES" id="221">
+                                                    <rect key="frame" x="-100" y="-100" width="233" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <animations/>
+                                                </scroller>
+                                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" controlSize="small" horizontal="NO" id="223">
+                                                    <rect key="frame" x="-22" y="17" width="11" height="60"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <animations/>
+                                                </scroller>
+                                                <tableHeaderView key="headerView" id="222">
+                                                    <rect key="frame" x="0.0" y="0.0" width="273" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <animations/>
+                                                </tableHeaderView>
+                                            </scrollView>
+                                            <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="21">
+                                                <rect key="frame" x="0.0" y="84" width="250" height="5"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                <animations/>
+                                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <font key="titleFont" metaFont="system"/>
+                                            </box>
+                                            <textField verticalHuggingPriority="750" id="19">
+                                                <rect key="frame" x="-1" y="86" width="256" height="14"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                <animations/>
+                                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Local redirections" id="180">
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                        </subviews>
+                                        <animations/>
+                                    </customView>
+                                </subviews>
+                                <animations/>
+                            </customView>
+                            <button id="160">
+                                <rect key="frame" x="208" y="3" width="67" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <buttonCell key="cell" type="bevel" title="Options..." bezelStyle="regularSquare" alignment="center" borderStyle="border" inset="2" id="194">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="miniSystem"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="disclosure:" target="80" id="161"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                    </customView>
+                    <button toolTip="Remove a tunnel" id="124">
+                        <rect key="frame" x="31" y="138" width="12" height="12"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <buttonCell key="cell" type="square" title="Button" bezelStyle="shadowlessSquare" image="Remove" imagePosition="only" alignment="center" alternateImage="Remove_Pressed" inset="2" id="195">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="delHost:" target="80" id="132"/>
+                        </connections>
+                    </button>
+                    <button toolTip="Add a tunnel" id="133">
+                        <rect key="frame" x="20" y="138" width="12" height="12"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <buttonCell key="cell" type="square" title="Button" bezelStyle="shadowlessSquare" image="Add" imagePosition="only" alignment="center" alternateImage="Add_Pressed" inset="2" id="196">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="addHost:" target="80" id="134"/>
+                        </connections>
+                    </button>
+                    <button id="158">
+                        <rect key="frame" x="18" y="347" width="204" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <buttonCell key="cell" type="check" title="Open tunnels list at run time" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="197">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="controlChanged:" target="80" id="164"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <animations/>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="80" id="104"/>
+            </connections>
+            <point key="canvasLocation" x="441" y="399.5"/>
+        </window>
+        <drawer trailingOffset="15" id="38">
+            <size key="contentSize" width="189" height="306"/>
+            <size key="minContentSize" width="189" height="50"/>
+            <size key="maxContentSize" width="189" height="400"/>
+            <connections>
+                <outlet property="contentView" destination="46" id="110"/>
+                <outlet property="parentWindow" destination="6" id="39"/>
+            </connections>
+        </drawer>
+        <customView id="46" userLabel="View">
+            <rect key="frame" x="0.0" y="0.0" width="189" height="283"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <textField toolTip="If you want to run manually this tunnel, copy/paste this into a terminal window" verticalHuggingPriority="750" id="172">
+                    <rect key="frame" x="8" y="15" width="172" height="46"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <animations/>
+                    <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" alignment="left" id="210">
+                        <font key="font" metaFont="label"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="170">
+                    <rect key="frame" x="11" y="67" width="166" height="5"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <animations/>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" metaFont="system"/>
+                </box>
+                <textField verticalHuggingPriority="750" id="169">
+                    <rect key="frame" x="8" y="69" width="129" height="14"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <animations/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Command line" id="209">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button toolTip="Automatically connect this tunnel when SSH Tunnel Manager starts" id="151">
+                    <rect key="frame" x="8" y="236" width="96" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                    <animations/>
+                    <buttonCell key="cell" type="check" title="Auto connect" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="208">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="controlChanged:" target="80" id="154"/>
+                    </connections>
+                </button>
+                <button toolTip="Allow hosts on your network to use this tunnel" id="62">
+                    <rect key="frame" x="8" y="156" width="145" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                    <animations/>
+                    <buttonCell key="cell" type="check" title="Allow LAN connections" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="207">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="controlChanged:" target="80" id="146"/>
+                    </connections>
+                </button>
+                <textField toolTip="Port on which SOCKS4 proxy will listen to" verticalHuggingPriority="750" id="61">
+                    <rect key="frame" x="61" y="116" width="35" height="19"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                    <animations/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" drawsBackground="YES" id="206">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="controlChanged:" target="80" id="148"/>
+                    </connections>
+                </textField>
+                <textField verticalHuggingPriority="750" id="60">
+                    <rect key="frame" x="26" y="118" width="30" height="13"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                    <animations/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Port :" id="205">
+                        <font key="font" metaFont="label"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button toolTip="Enable SOCKS4 proxy on the specified port" id="59">
+                    <rect key="frame" x="8" y="134" width="140" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                    <animations/>
+                    <buttonCell key="cell" type="check" title="Enable SOCKS4 proxy" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="204">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="controlChanged:" target="80" id="147"/>
+                    </connections>
+                </button>
+                <popUpButton toolTip="Crpt method to use for this tunnel" verticalHuggingPriority="750" id="56">
+                    <rect key="frame" x="95" y="87" width="85" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                    <animations/>
+                    <popUpButtonCell key="cell" type="push" title="blowfish" bezelStyle="rounded" alignment="left" controlSize="small" lineBreakMode="clipping" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="54" id="203">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                        <menu key="menu" title="OtherViews" id="57">
+                            <items>
+                                <menuItem title="blowfish" state="on" id="54"/>
+                                <menuItem title="3des" id="58"/>
+                                <menuItem title="des" id="55"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <action selector="controlChanged:" target="80" id="149"/>
+                    </connections>
+                </popUpButton>
+                <textField verticalHuggingPriority="750" id="53">
+                    <rect key="frame" x="8" y="92" width="85" height="14"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                    <animations/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Crypt method :" id="202">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button toolTip="Force use of SSH v1 protocol" id="52">
+                    <rect key="frame" x="8" y="176" width="116" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                    <animations/>
+                    <buttonCell key="cell" type="check" title="Force v1 protocol" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="201">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="controlChanged:" target="80" id="145"/>
+                    </connections>
+                </button>
+                <button toolTip="Enable compression" id="51">
+                    <rect key="frame" x="8" y="196" width="76" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                    <animations/>
+                    <buttonCell key="cell" type="check" title="Compress" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="200">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="controlChanged:" target="80" id="144"/>
+                    </connections>
+                </button>
+                <button id="50">
+                    <rect key="frame" x="8" y="216" width="140" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                    <string key="toolTip">Force SSH Tunnel Manager to handle authentication
+Uncheck this if you use an agent</string>
+                    <animations/>
+                    <buttonCell key="cell" type="check" title="Handle authentication" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="199">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="controlChanged:" target="80" id="143"/>
+                    </connections>
+                </button>
+                <textField verticalHuggingPriority="750" id="49">
+                    <rect key="frame" x="8" y="260" width="129" height="14"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                    <animations/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Advanced options" id="198">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="48">
+                    <rect key="frame" x="11" y="258" width="166" height="5"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                    <animations/>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" metaFont="system"/>
+                </box>
+            </subviews>
+            <animations/>
+        </customView>
+        <customObject id="80" userLabel="PreferencesController" customClass="PreferencesController">
+            <connections>
+                <outlet property="SOCKS4Port" destination="61" id="88"/>
+                <outlet property="allowLAN" destination="62" id="92"/>
+                <outlet property="autoConnect" destination="151" id="153"/>
+                <outlet property="autoOpen" destination="158" id="163"/>
+                <outlet property="commandLine" destination="172" id="173"/>
+                <outlet property="compress" destination="51" id="90"/>
+                <outlet property="cryptMethod" destination="56" id="93"/>
+                <outlet property="drawer" destination="38" id="97"/>
+                <outlet property="emptyView" destination="111" id="113"/>
+                <outlet property="enableSOCKS4" destination="59" id="94"/>
+                <outlet property="forcev1" destination="52" id="91"/>
+                <outlet property="fullView" destination="114" id="117"/>
+                <outlet property="handleAuthentication" destination="50" id="89"/>
+                <outlet property="host" destination="16" id="84"/>
+                <outlet property="localList" destination="25" id="86"/>
+                <outlet property="login" destination="13" id="83"/>
+                <outlet property="name" destination="11" id="82"/>
+                <outlet property="options" destination="160" id="162"/>
+                <outlet property="port" destination="18" id="85"/>
+                <outlet property="remoteList" destination="27" id="87"/>
+                <outlet property="tunnelsList" destination="10" id="81"/>
+                <outlet property="urlTextField" destination="37" id="165"/>
+                <outlet property="window" destination="6" id="116"/>
+            </connections>
+        </customObject>
+        <customView id="111" userLabel="View1">
+            <rect key="frame" x="0.0" y="0.0" width="282" height="106"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField verticalHuggingPriority="750" id="112">
+                    <rect key="frame" x="-3" y="0.0" width="279" height="64"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <animations/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" id="211">
+                        <font key="font" metaFont="label"/>
+                        <string key="title">Welcome to SSH Tunnel Manager.
+
+No tunnels currently selected, you can choose one to the left, or create one with the "+" button.</string>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <animations/>
+        </customView>
+        <view id="20">
+            <rect key="frame" x="0.0" y="0.0" width="125" height="1"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <animations/>
+        </view>
+        <view id="34">
+            <rect key="frame" x="0.0" y="0.0" width="125" height="1"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <animations/>
+        </view>
+        <view id="47">
+            <rect key="frame" x="0.0" y="0.0" width="125" height="1"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <animations/>
+        </view>
+        <view id="171">
+            <rect key="frame" x="0.0" y="0.0" width="125" height="1"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <animations/>
+        </view>
+        <numberFormatter formatterBehavior="default10_4" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="0" maximumIntegerDigits="42" id="Ong-tB-2Mz">
+            <real key="minimum" value="0.0"/>
+            <real key="maximum" value="65535"/>
+        </numberFormatter>
+    </objects>
+    <resources>
+        <image name="Add" width="12" height="12"/>
+        <image name="Add_Pressed" width="12" height="12"/>
+        <image name="Remove" width="12" height="12"/>
+        <image name="Remove_Pressed" width="12" height="12"/>
+        <image name="stm" width="128" height="128"/>
+    </resources>
+</document>

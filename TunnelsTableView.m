@@ -39,7 +39,7 @@
 - (NSColor *)_highlightColorForCell:(NSCell *)cell;
 {
     if (selectionActive)
-	return [ (TunnelsTableView*)super _highlightColorForCell: cell ];
+	return [ NSColor yellowColor ];
     else
 	return nil;
 }
